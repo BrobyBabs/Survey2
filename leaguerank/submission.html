@@ -10,14 +10,14 @@
   <body>
     <section class="overlay">
         <h1>Your League Of Legends Rank Is</h1>
+        <script type="text/javascript" src="main.js">
+          var final = getPlacement();
+          document.body.appendChild(document.createTextNode(getPlacement()));
+        </script>
+        <p id = final></p>
       <a href="index.html">Go back</a>
     </section>
   </body>
-  
   <body>
-    <script src="main.js"></script>
-    <script>
-        evaluateResult();
-    </script>
   </body>
 </html>

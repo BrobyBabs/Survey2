@@ -10,23 +10,31 @@ function updateSliderValue(sliderID, valueID){
 
 function evaluateResult(){
     // TODO: write some code to calculate the user input
-    var total;
+    var total = 0;
     var creeps = answers.get('csm');
-    total += creeps;
+    var intCreeps = parseInt(creeps);
+    total += intCreeps;
     var kpp = answers.get('kpp');
-    total += kpp;
+    var intKpp = parseInt(kpp);
+    total += intKpp;
     var wardScore = answers.get('wards');
-    total += wardScore;
+    var intWardScore = parseInt(wardScore);
+    total += intWardScore;
     var goldPer = answers.get('goldearned');
-    total += goldPer;
+    var intGoldPer = parseInt(goldPer);
+    total += intGoldPer;
     var kda = answers.get('kda');
-    total += kda;
+    var intKda = parseInt(kda);
+    total += intKda;
     var objControl = answers.get('objectives');
-    total += objControl;
+    var intObjControl = parseInt(objControl);
+    total += intObjControl;
     var teamFightDurability = answers.get('tfd');
-    total += teamFightDurability;
+    var intTeamFightDurability = parseInt(teamFightDurability);
+    total += intTeamFightDurability;
     var cons = answers.get('consistency');
-    total += cons;
+    var intCons = parseInt(cons);
+    total += intCons;
     console.log(total)
     return total;
 }
@@ -43,6 +51,32 @@ function readData(){
     document.getElementById('score').innerHTML = result;
 }
 
+function getPlacement(){
+
+    var mmr = evaluateResult();
+    var rank = "unranked";
+
+    if (mmr < 10){
+        rank = 'Bronze';
+    } else if (mmr < 20){
+        rank = 'Silver';
+    } else if (mmr < 30){
+        rank = 'Gold';
+    } else if (mmr < 40){
+        rank = 'Platinum';
+    } else if (mmr < 50){
+        rank = 'Diamond';
+    } else if (mmr < 60){
+        rank = 'Master';
+    }else if (mmr < 70){
+        rank = 'Grand Master';
+    } else {
+        rank = 'Challenger';
+    }
+
+    console.log(rank);
+    return rank;
+}
 // var slider = document.getElementById("cs");
 // var output = document.getElementById("creepscore");
 // output.innerHTML = slider.value; // Display the default slider value
