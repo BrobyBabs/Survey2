@@ -45,7 +45,13 @@ function getDragons(){
     for(let i = 0; dragons >= i; i++){
         dragonArray[i] = new Image();
         dragonArray[i].src = 'images/dragon.png';
+        const element = '<image src="' + dragonArray[i] + '">'
+        document.getElementById('drag' + i).innerHTML += Element;
     }
+    document.getElementById('drag0').innerHTML = '<li><img src= dragonArray[0].src width="50" height="50">'
+    document.getElementById('drag1').innerHTML = '<li><img src= dragonArray[1].src width="50" height="50">'
+    document.getElementById('drag2').innerHTML = '<li><img src= dragonArray[2].src width="50" height="50">'
+    document.getElementById('drag3').innerHTML = '<li><img src= dragonArray[3].src width="50" height="50">'
 }
 
 function storeData(){
