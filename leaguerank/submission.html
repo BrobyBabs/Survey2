@@ -5,17 +5,34 @@
     <title>Your League of Legends Rank Is</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="index.html" defer></script>
   </head>
   <body>
     <section class="overlay">
         <h1>Your League Of Legends Rank Is</h1>
-        <script type="text/javascript" src="main.js">
-          var final = getPlacement();
-          document.body.appendChild(document.createTextNode(getPlacement()));
+        <ul class="inline">
+          <script src = main.js></script>
+          <script>
+            var none = getDragons();
+          </script>
+          <li><img src= dragonArray[0].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[1].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[2].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[3].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[4].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[5].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[6].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[7].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[8].src width="50" height="50" id="drag">
+          <li><img src= dragonArray[9].src width="50" height="50" id="drag">
+
+      </ul>
+        <h3 id = holders></h3>
+        <script src="main.js"></script>
+        <script>
+          var hold = getPlacement();
+          document.getElementById('holders').innerHTML = hold;
         </script>
-        <p id = final></p>
-      <a href="index.html">Go back</a>
+        <a href="index.html">Go back</a>
     </section>
   </body>
   <body>

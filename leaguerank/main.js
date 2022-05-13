@@ -1,6 +1,3 @@
-
-const answers = new URLSearchParams(window.location.search);
-
 function updateSliderValue(sliderID, valueID){
     //store slider value in the variable called sliedrValue
     let sliderValue = document.getElementById(sliderID).value;
@@ -10,6 +7,8 @@ function updateSliderValue(sliderID, valueID){
 
 function evaluateResult(){
     // TODO: write some code to calculate the user input
+    console.log('running')
+    const answers = new URLSearchParams(window.location.search);
     var total = 0;
     var creeps = answers.get('csm');
     var intCreeps = parseInt(creeps);
@@ -37,6 +36,16 @@ function evaluateResult(){
     total += intCons;
     console.log(total)
     return total;
+}
+
+function getDragons(){
+    const answers = new URLSearchParams(window.location.search);
+    var dragons = answers.get('objectives');
+    var dragonArray = new Array();
+    for(let i = 0; dragons >= i; i++){
+        dragonArray[i] = new Image();
+        dragonArray[i].src = 'images/dragon.png';
+    }
 }
 
 function storeData(){
