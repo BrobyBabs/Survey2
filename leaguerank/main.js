@@ -37,23 +37,6 @@ function evaluateResult(){
     console.log(total)
     return total;
 }
-
-function getDragons(){
-    const answers = new URLSearchParams(window.location.search);
-    var dragons = answers.get('objectives');
-    var dragonArray = new Array();
-    for(let i = 0; dragons >= i; i++){
-        dragonArray[i] = new Image();
-        dragonArray[i].src = 'images/dragon.png';
-        const element = '<image src="' + dragonArray[i] + '">'
-        document.getElementById('drag' + i).innerHTML += Element;
-    }
-    document.getElementById('drag0').innerHTML = '<li><img src= dragonArray[0].src width="50" height="50">'
-    document.getElementById('drag1').innerHTML = '<li><img src= dragonArray[1].src width="50" height="50">'
-    document.getElementById('drag2').innerHTML = '<li><img src= dragonArray[2].src width="50" height="50">'
-    document.getElementById('drag3').innerHTML = '<li><img src= dragonArray[3].src width="50" height="50">'
-}
-
 function storeData(){
     let score = evaluateResult();
     window.localStorage.setItem('score', score);
@@ -70,26 +53,38 @@ function getPlacement(){
 
     var mmr = evaluateResult();
     var rank = "unranked";
+    var icon = document.createElement('img');
+    icon.src = 'rank/bronze.webp';
 
     if (mmr < 10){
         rank = 'Bronze';
+        icon.src = 'rank/bronze.webp';
     } else if (mmr < 20){
         rank = 'Silver';
+        icon.src = 'ranks/silver.webp';
     } else if (mmr < 30){
         rank = 'Gold';
+        icon.src = 'ranks/gold.webp';
     } else if (mmr < 40){
         rank = 'Platinum';
+        icon.src = 'ranks/platinum.webp';
     } else if (mmr < 50){
         rank = 'Diamond';
+        icon.src = 'ranks/diamond.webp';
     } else if (mmr < 60){
         rank = 'Master';
+        icon.src = 'ranks/master.webp';
     }else if (mmr < 70){
         rank = 'Grand Master';
+        icon.src = 'ranks/grandmaster.webp';
     } else {
         rank = 'Challenger';
+        icon.src = 'ranks/challenger.webp';
     }
-
-    console.log(rank);
+    // document.body.appendChild(icon);
+    // document.querySelector('.ranks').appendChild(icon);
+    // document.getElementById(icons).appendChild(icon);
+    // console.log(rank);
     return rank;
 }
 // var slider = document.getElementById("cs");

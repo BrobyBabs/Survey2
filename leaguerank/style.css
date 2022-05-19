@@ -1,7 +1,12 @@
+@font-face {
+  font-family: league;
+  src: url(league.otf);
+}
 body {
-  background-color: #59CD90;
-  color: #3FA7D6;
-  font-family: 'Titillium Web', sans-serif;
+  background-image: url('images/leaguebackground.jpg');
+  background-size: cover;
+  color: #273135;
+  font-family: league;
 }
 
 form {
@@ -20,7 +25,7 @@ h1 {
   display: block;
   padding: 2%;
   height: 90vh;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
   text-align: center;
 }
@@ -28,6 +33,10 @@ h1 {
 .inline li {
   display: inline;
   white-space: nowrap
+}
+
+.ranks{
+  display: inline;
 }
 
 .slidecontainer {
