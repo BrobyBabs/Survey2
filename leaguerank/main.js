@@ -58,31 +58,31 @@ function getPlacement(){
 
     if (mmr < 10){
         rank = 'Bronze';
-        icon.src = 'rank/bronze.webp';
+        document.getElementById("rankIcon").src="ranks/bronze.webp";
     } else if (mmr < 20){
         rank = 'Silver';
-        icon.src = 'ranks/silver.webp';
+        document.getElementById("rankIcon").src = 'ranks/silver.webp';
     } else if (mmr < 30){
         rank = 'Gold';
-        icon.src = 'ranks/gold.webp';
+        document.getElementById("rankIcon").src = 'ranks/gold.webp';
     } else if (mmr < 40){
         rank = 'Platinum';
-        icon.src = 'ranks/platinum.webp';
+        document.getElementById("rankIcon").src = 'ranks/platinum.webp';
     } else if (mmr < 50){
         rank = 'Diamond';
-        icon.src = 'ranks/diamond.webp';
+        document.getElementById("rankIcon").src = 'ranks/diamond.webp';
     } else if (mmr < 60){
         rank = 'Master';
-        icon.src = 'ranks/master.webp';
+        document.getElementById("rankIcon").src = 'ranks/master.webp';
     }else if (mmr < 70){
         rank = 'Grand Master';
-        icon.src = 'ranks/grandmaster.webp';
+        document.getElementById("rankIcon").src = 'ranks/grandmaster.webp';
     } else {
         rank = 'Challenger';
-        icon.src = 'ranks/challenger.webp';
+        document.getElementById("rankIcon").src = 'ranks/challenger.webp';
     }
-    document.body.appendChild(icon);
-    document.getElementById(icons).appendChild(icon);
+    // document.body.appendChild(icon);
+    // document.getElementById(icons).appendChild(icon);
     console.log(rank);
     return rank;
 }
