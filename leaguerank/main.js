@@ -59,27 +59,35 @@ function getPlacement(){
     if (mmr < 10){
         rank = 'Bronze';
         document.getElementById("rankIcon").src="ranks/bronze.webp";
+        document.getElementById("rankVideo").src = "https://www.youtube.com/embed/bbTwjclFEgc";
     } else if (mmr < 20){
         rank = 'Silver';
         document.getElementById("rankIcon").src = 'ranks/silver.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/Q1BjV6CMQig'
     } else if (mmr < 30){
         rank = 'Gold';
         document.getElementById("rankIcon").src = 'ranks/gold.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/a4Txq_oWJG8'
     } else if (mmr < 40){
         rank = 'Platinum';
         document.getElementById("rankIcon").src = 'ranks/platinum.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/VUsMajmkQtM'
     } else if (mmr < 50){
         rank = 'Diamond';
         document.getElementById("rankIcon").src = 'ranks/diamond.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/xAyNo4ASS38'
     } else if (mmr < 60){
         rank = 'Master';
         document.getElementById("rankIcon").src = 'ranks/master.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/IT17RaiL3UY'
     }else if (mmr < 70){
         rank = 'Grand Master';
         document.getElementById("rankIcon").src = 'ranks/grandmaster.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/z6lNQVpTBgI'
     } else {
         rank = 'Challenger';
         document.getElementById("rankIcon").src = 'ranks/challenger.webp';
+        document.getElementById("rankVideo").src = 'https://www.youtube.com/embed/ZXCuk_YOmTY'
     }
     // document.body.appendChild(icon);
     // document.getElementById(icons).appendChild(icon);
