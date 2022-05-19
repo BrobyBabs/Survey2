@@ -81,12 +81,12 @@ function getPlacement(){
         rank = 'Challenger';
         icon.src = 'ranks/challenger.webp';
     }
-    // document.body.appendChild(icon);
-    // document.querySelector('.ranks').appendChild(icon);
-    // document.getElementById(icons).appendChild(icon);
-    // console.log(rank);
+    document.body.appendChild(icon);
+    document.getElementById(icons).appendChild(icon);
+    console.log(rank);
     return rank;
 }
+
 // var slider = document.getElementById("cs");
 // var output = document.getElementById("creepscore");
 // output.innerHTML = slider.value; // Display the default slider value
